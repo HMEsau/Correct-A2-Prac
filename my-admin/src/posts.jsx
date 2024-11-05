@@ -38,3 +38,16 @@ export const PostShow = () => (
         </SimpleShowLayout>
     </Show>
 );
+
+export const PostCreate = () => (
+    <Create>
+        <SimpleForm>
+            <TextInput source="collectionName" />
+            <TextInput source="content" />
+            <TextInput source="created" />
+            <TextInput source="id" />
+            <TextInput source="new_posts" />
+            <DateInput source="updated" />
+        </SimpleForm>
+    </Create>
+);
