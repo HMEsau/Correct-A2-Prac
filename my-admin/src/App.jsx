@@ -1,5 +1,6 @@
 import { Admin, Resource, ListGuesser, ShowGuesser, EditGuesser  } from 'react-admin';
 import {PocketBaseProvider} from './ra-pocketbase';
+import { PostList, PostEdit, PostShow } from './posts';
 
 const apiURL="https://silver-orbit-wr79rp4qrr9qh5jpr-8090.app.github.dev/";
 
@@ -12,11 +13,18 @@ function App () {
       dataProvider={dataProvider}
       authProvider={authProvider}
     >
+      + <Resource 
+          name="posts" 
+          list={PostList}
+          show={PostShow} 
+          edit={PostEdit} 
+        />
+    
     </Admin>
-  + <Resource name="posts" list={ListGuesser} show={ShowGuesser} edit={EditGuesser} 
-      //create={CreateGuesser}
-    />
-  );
+  //create={CreateGuesser}
+      
+    
+  )
 }
 
 export default App
